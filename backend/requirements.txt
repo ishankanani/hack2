@@ -1,0 +1,6 @@
+# Recommended Python 3.11–3.13 (3.14 lacks some prebuilt wheels; then: pip install --upgrade pydantic)
+fastapi>=0.115,<1.0
+uvicorn[standard]>=0.30
+pydantic>=2.9
+httpx>=0.27
+pytest>=8.0

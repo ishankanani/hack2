@@ -1,0 +1,1540 @@
+{
+  "SHP-2A8406": {
+    "id": "SHP-2A8406",
+    "origin": "R01",
+    "destination": "R11",
+    "current_location": "R01",
+    "route": [
+      "R01",
+      "R11"
+    ],
+    "next_hub": "R11",
+    "status": "PLANNED",
+    "planned_departure": "2026-09-19T16:00:00+00:00",
+    "scheduled_departure": null,
+    "current_eta": "2026-09-21T03:47:00+00:00",
+    "required_delivery": "2026-09-21T23:00:00+00:00",
+    "distance_km": 766,
+    "weight_kg": 8200,
+    "container": "C1C996",
+    "value_eur": 42000,
+    "est_cost_eur": 688,
+    "est_fuel_l": 230,
+    "cost_per_kg": 0.0839,
+    "risk_level": "MEDIUM",
+    "customer_segment": "Top",
+    "alert": null,
+    "options": [
+      {
+        "origin": "R01",
+        "destination": "R11",
+        "path": [
+          "R01",
+          "R11"
+        ],
+        "depart_at": "2026-09-19T16:00:00+00:00",
+        "eta": "2026-09-21T03:47:00+00:00",
+        "total_minutes": 2147,
+        "components": {
+          "transport": 707,
+          "transfer": 120,
+          "hub_delay": 0,
+          "traffic": 0,
+          "legal_wait": 1320
+        },
+        "steps": [
+          {
+            "type": "handling",
+            "location": "R01",
+            "location_name": "Hamburg",
+            "start": "2026-09-19T16:00:00+00:00",
+            "end": "2026-09-19T18:00:00+00:00",
+            "minutes": 120,
+            "detail": "Loading & handling (proxy)",
+            "source": "proxy"
+          },
+          {
+            "type": "drive",
+            "location": "R01",
+            "location_name": "Hamburg",
+            "start": "2026-09-19T18:00:00+00:00",
+            "end": "2026-09-19T22:00:00+00:00",
+            "minutes": 240,
+            "detail": "Direct road Hamburg \u2192 M\u00fcnchen (766 km, estimated)",
+            "source": "estimated"
+          },
+          {
+            "type": "legal_wait",
+            "location": "R01",
+            "location_name": "Hamburg",
+            "start": "2026-09-19T22:00:00+00:00",
+            "end": "2026-09-20T20:00:00+00:00",
+            "minutes": 1320,
+            "detail": "Sunday driving ban",
+            "source": "REGULATORY DATA"
+          },
+          {
+            "type": "drive",
+            "location": "R01",
+            "location_name": "Hamburg",
+            "start": "2026-09-20T20:00:00+00:00",
+            "end": "2026-09-21T03:47:00+00:00",
+            "minutes": 467,
+            "detail": "Direct road Hamburg \u2192 M\u00fcnchen (766 km, estimated)",
+            "source": "estimated"
+          }
+        ],
+        "weather_notes": [],
+        "data_sources": {
+          "transport": "estimated (haversine \u00d7 1.25)",
+          "legal_wait": "REGULATORY DATA"
+        },
+        "label": "Direct estimate (no scheduled lane)",
+        "kind": "estimate",
+        "cost": {
+          "transport_eur": 688,
+          "fuel_l": 230,
+          "fuel_eur": 380,
+          "distance_km": 766,
+          "cost_per_kg": 0.0839
+        },
+        "risk": {
+          "level": "MEDIUM",
+          "score": 35,
+          "reasons": [
+            "Route crosses a driving ban \u2192 22h legal waiting",
+            "Lanes historically spill volume on 18% of days"
+          ],
+          "exposure_eur": 0,
+          "deadline_ok": true
+        },
+        "ldm": 4.7,
+        "historical": {
+          "avg_cost_eur": 3902,
+          "avg_fuel_l": 604,
+          "reliability_pct": 81.9,
+          "samples": 1332
+        }
+      },
+      {
+        "origin": "R01",
+        "destination": "R11",
+        "path": [
+          "R01",
+          "HN",
+          "R11"
+        ],
+        "depart_at": "2026-09-19T16:00:00+00:00",
+        "eta": "2026-09-21T07:46:00+00:00",
+        "total_minutes": 2386,
+        "components": {
+          "transport": 794,
+          "transfer": 272,
+          "hub_delay": 0,
+          "traffic": 0,
+          "legal_wait": 1320
+        },
+        "steps": [
+          {
+            "type": "handling",
+            "location": "R01",
+            "location_name": "Hamburg",
+            "start": "2026-09-19T16:00:00+00:00",
+            "end": "2026-09-19T18:32:00+00:00",
+            "minutes": 152,
+            "detail": "Loading & handling (historical proxy)",
+            "source": "derived from disposition.csv (proxy; file has no measured transfer times)"
+          },
+          {
+            "type": "drive",
+            "location": "R01",
+            "location_name": "Hamburg",
+            "start": "2026-09-19T18:32:00+00:00",
+            "end": "2026-09-19T22:00:00+00:00",
+            "minutes": 208,
+            "detail": "Road Hamburg \u2192 Heilbronn (600 km)",
+            "source": "relationen.csv"
+          },
+          {
+            "type": "legal_wait",
+            "location": "R01",
+            "location_name": "Hamburg",
+            "start": "2026-09-19T22:00:00+00:00",
+            "end": "2026-09-20T20:00:00+00:00",
+            "minutes": 1320,
+            "detail": "Sunday driving ban",
+            "source": "REGULATORY DATA"
+          },
+          {
+            "type": "drive",
+            "location": "R01",
+            "location_name": "Hamburg",
+            "start": "2026-09-20T20:00:00+00:00",
+            "end": "2026-09-21T01:46:00+00:00",
+            "minutes": 346,
+            "detail": "Road Hamburg \u2192 Heilbronn (600 km)",
+            "source": "relationen.csv"
+          },
+          {
+            "type": "handling",
+            "location": "HN",
+            "location_name": "Heilbronn",
+            "start": "2026-09-21T01:46:00+00:00",
+            "end": "2026-09-21T03:46:00+00:00",
+            "minutes": 120,
+            "detail": "Hub transfer (historical proxy)",
+            "source": "hub baseline (labelled)"
+          },
+          {
+            "type": "drive",
+            "location": "HN",
+            "location_name": "Heilbronn",
+            "start": "2026-09-21T03:46:00+00:00",
+            "end": "2026-09-21T07:46:00+00:00",
+            "minutes": 240,
+            "detail": "Road Heilbronn \u2192 M\u00fcnchen (260 km)",
+            "source": "relationen.csv"
+          }
+        ],
+        "weather_notes": [],
+        "data_sources": {
+          "transport": "relationen.csv (km) + road average",
+          "transfer": "HISTORICAL (derived proxy from disposition.csv)",
+          "hub_delay": "MANAGER INPUT",
+          "traffic": "NOT_CONFIGURED",
+          "legal_wait": "REGULATORY DATA (kalender.csv + German rules)"
+        },
+        "label": "Via Heilbronn hub",
+        "kind": "scheduled",
+        "cost": {
+          "transport_eur": 559,
+          "fuel_l": 258,
+          "fuel_eur": 426,
+          "distance_km": 860,
+          "cost_per_kg": 0.0682
+        },
+        "risk": {
+          "level": "MEDIUM",
+          "score": 35,
+          "reasons": [
+            "Route crosses a driving ban \u2192 22h legal waiting",
+            "Lanes historically spill volume on 18% of days"
+          ],
+          "exposure_eur": 0,
+          "deadline_ok": true
+        },
+        "ldm": 4.7,
+        "historical": {
+          "avg_cost_eur": 3902,
+          "avg_fuel_l": 604,
+          "reliability_pct": 81.9,
+          "samples": 1332
+        }
+      }
+    ],
+    "created_at": "2026-09-19T14:00:28.276706+00:00",
+    "delay_minutes": 0
+  },
+  "SHP-FD537D": {
+    "id": "SHP-FD537D",
+    "origin": "R11",
+    "destination": "R24",
+    "current_location": "R11",
+    "route": [
+      "R11",
+      "R24"
+    ],
+    "next_hub": "R24",
+    "status": "PLANNED",
+    "planned_departure": "2026-09-19T20:00:00+00:00",
+    "scheduled_departure": null,
+    "current_eta": "2026-09-21T08:45:00+00:00",
+    "required_delivery": "2026-09-21T14:00:00+00:00",
+    "distance_km": 829,
+    "weight_kg": 15400,
+    "container": "CFAFE6",
+    "value_eur": 180000,
+    "est_cost_eur": 1394,
+    "est_fuel_l": 249,
+    "cost_per_kg": 0.0905,
+    "risk_level": "MEDIUM",
+    "customer_segment": "Top",
+    "alert": null,
+    "options": [
+      {
+        "origin": "R11",
+        "destination": "R24",
+        "path": [
+          "R11",
+          "R24"
+        ],
+        "depart_at": "2026-09-19T20:00:00+00:00",
+        "eta": "2026-09-21T08:45:00+00:00",
+        "total_minutes": 2205,
+        "components": {
+          "transport": 765,
+          "transfer": 120,
+          "hub_delay": 0,
+          "traffic": 0,
+          "legal_wait": 1320
+        },
+        "steps": [
+          {
+            "type": "handling",
+            "location": "R11",
+            "location_name": "M\u00fcnchen",
+            "start": "2026-09-19T20:00:00+00:00",
+            "end": "2026-09-19T22:00:00+00:00",
+            "minutes": 120,
+            "detail": "Loading & handling (proxy)",
+            "source": "proxy"
+          },
+          {
+            "type": "legal_wait",
+            "location": "R11",
+            "location_name": "M\u00fcnchen",
+            "start": "2026-09-19T22:00:00+00:00",
+            "end": "2026-09-20T20:00:00+00:00",
+            "minutes": 1320,
+            "detail": "Sunday driving ban",
+            "source": "REGULATORY DATA"
+          },
+          {
+            "type": "drive",
+            "location": "R11",
+            "location_name": "M\u00fcnchen",
+            "start": "2026-09-20T20:00:00+00:00",
+            "end": "2026-09-21T08:45:00+00:00",
+            "minutes": 765,
+            "detail": "Direct road M\u00fcnchen \u2192 Rostock (829 km, estimated)",
+            "source": "estimated"
+          }
+        ],
+        "weather_notes": [],
+        "data_sources": {
+          "transport": "estimated (haversine \u00d7 1.25)",
+          "legal_wait": "REGULATORY DATA"
+        },
+        "label": "Direct estimate (no scheduled lane)",
+        "kind": "estimate",
+        "cost": {
+          "transport_eur": 1394,
+          "fuel_l": 249,
+          "fuel_eur": 411,
+          "distance_km": 829,
+          "cost_per_kg": 0.0905
+        },
+        "risk": {
+          "level": "MEDIUM",
+          "score": 30,
+          "reasons": [
+            "Route crosses a driving ban \u2192 22h legal waiting",
+            "High-value shipment (\u20ac180,000) \u2014 elevated exposure"
+          ],
+          "exposure_eur": 0,
+          "deadline_ok": true
+        },
+        "ldm": 8.8,
+        "historical": {
+          "avg_cost_eur": 2176,
+          "avg_fuel_l": 319,
+          "reliability_pct": 89.6,
+          "samples": 1332
+        }
+      },
+      {
+        "origin": "R11",
+        "destination": "R24",
+        "path": [
+          "R11",
+          "HN",
+          "R24"
+        ],
+        "depart_at": "2026-09-19T20:00:00+00:00",
+        "eta": "2026-09-21T13:05:00+00:00",
+        "total_minutes": 2465,
+        "components": {
+          "transport": 905,
+          "transfer": 274,
+          "hub_delay": 0,
+          "traffic": 0,
+          "legal_wait": 1286
+        },
+        "steps": [
+          {
+            "type": "handling",
+            "location": "R11",
+            "location_name": "M\u00fcnchen",
+            "start": "2026-09-19T20:00:00+00:00",
+            "end": "2026-09-19T22:34:00+00:00",
+            "minutes": 154,
+            "detail": "Loading & handling (historical proxy)",
+            "source": "derived from disposition.csv (proxy; file has no measured transfer times)"
+          },
+          {
+            "type": "legal_wait",
+            "location": "R11",
+            "location_name": "M\u00fcnchen",
+            "start": "2026-09-19T22:34:00+00:00",
+            "end": "2026-09-20T20:00:00+00:00",
+            "minutes": 1286,
+            "detail": "Sunday driving ban",
+            "source": "REGULATORY DATA"
+          },
+          {
+            "type": "drive",
+            "location": "R11",
+            "location_name": "M\u00fcnchen",
+            "start": "2026-09-20T20:00:00+00:00",
+            "end": "2026-09-21T00:00:00+00:00",
+            "minutes": 240,
+            "detail": "Road M\u00fcnchen \u2192 Heilbronn (260 km)",
+            "source": "relationen.csv"
+          },
+          {
+            "type": "handling",
+            "location": "HN",
+            "location_name": "Heilbronn",
+            "start": "2026-09-21T00:00:00+00:00",
+            "end": "2026-09-21T02:00:00+00:00",
+            "minutes": 120,
+            "detail": "Hub transfer (historical proxy)",
+            "source": "hub baseline (labelled)"
+          },
+          {
+            "type": "drive",
+            "location": "HN",
+            "location_name": "Heilbronn",
+            "start": "2026-09-21T02:00:00+00:00",
+            "end": "2026-09-21T13:05:00+00:00",
+            "minutes": 665,
+            "detail": "Road Heilbronn \u2192 Rostock (720 km)",
+            "source": "relationen.csv"
+          }
+        ],
+        "weather_notes": [],
+        "data_sources": {
+          "transport": "relationen.csv (km) + road average",
+          "transfer": "HISTORICAL (derived proxy from disposition.csv)",
+          "hub_delay": "MANAGER INPUT",
+          "traffic": "NOT_CONFIGURED",
+          "legal_wait": "REGULATORY DATA (kalender.csv + German rules)"
+        },
+        "label": "Via Heilbronn hub",
+        "kind": "scheduled",
+        "cost": {
+          "transport_eur": 1151,
+          "fuel_l": 294,
+          "fuel_eur": 485,
+          "distance_km": 980,
+          "cost_per_kg": 0.0747
+        },
+        "risk": {
+          "level": "HIGH",
+          "score": 60,
+          "reasons": [
+            "Only 0h 55m of slack before the deadline",
+            "Route crosses a driving ban \u2192 21h legal waiting",
+            "High-value shipment (\u20ac180,000) \u2014 elevated exposure"
+          ],
+          "exposure_eur": 0,
+          "deadline_ok": true
+        },
+        "ldm": 8.8,
+        "historical": {
+          "avg_cost_eur": 2176,
+          "avg_fuel_l": 319,
+          "reliability_pct": 89.6,
+          "samples": 1332
+        }
+      }
+    ],
+    "created_at": "2026-09-19T14:00:28.278275+00:00",
+    "delay_minutes": 0
+  },
+  "SHP-2FDE3C": {
+    "id": "SHP-2FDE3C",
+    "origin": "R08",
+    "destination": "R03",
+    "current_location": "R08",
+    "route": [
+      "R08",
+      "R03"
+    ],
+    "next_hub": "R03",
+    "status": "PLANNED",
+    "planned_departure": "2026-09-20T14:00:00+00:00",
+    "scheduled_departure": null,
+    "current_eta": "2026-09-21T04:08:00+00:00",
+    "required_delivery": "2026-09-22T14:00:00+00:00",
+    "distance_km": 529,
+    "weight_kg": 3100,
+    "container": "C55514",
+    "value_eur": 12000,
+    "est_cost_eur": 206,
+    "est_fuel_l": 159,
+    "cost_per_kg": 0.0665,
+    "risk_level": "MEDIUM",
+    "customer_segment": "Standard",
+    "alert": null,
+    "options": [
+      {
+        "origin": "R08",
+        "destination": "R03",
+        "path": [
+          "R08",
+          "R03"
+        ],
+        "depart_at": "2026-09-20T14:00:00+00:00",
+        "eta": "2026-09-21T04:08:00+00:00",
+        "total_minutes": 848,
+        "components": {
+          "transport": 488,
+          "transfer": 120,
+          "hub_delay": 0,
+          "traffic": 0,
+          "legal_wait": 240
+        },
+        "steps": [
+          {
+            "type": "handling",
+            "location": "R08",
+            "location_name": "Frankfurt",
+            "start": "2026-09-20T14:00:00+00:00",
+            "end": "2026-09-20T16:00:00+00:00",
+            "minutes": 120,
+            "detail": "Loading & handling (proxy)",
+            "source": "proxy"
+          },
+          {
+            "type": "legal_wait",
+            "location": "R08",
+            "location_name": "Frankfurt",
+            "start": "2026-09-20T16:00:00+00:00",
+            "end": "2026-09-20T20:00:00+00:00",
+            "minutes": 240,
+            "detail": "Sunday driving ban",
+            "source": "REGULATORY DATA"
+          },
+          {
+            "type": "drive",
+            "location": "R08",
+            "location_name": "Frankfurt",
+            "start": "2026-09-20T20:00:00+00:00",
+            "end": "2026-09-21T04:08:00+00:00",
+            "minutes": 488,
+            "detail": "Direct road Frankfurt \u2192 Berlin (529 km, estimated)",
+            "source": "estimated"
+          }
+        ],
+        "weather_notes": [],
+        "data_sources": {
+          "transport": "estimated (haversine \u00d7 1.25)",
+          "legal_wait": "REGULATORY DATA"
+        },
+        "label": "Direct estimate (no scheduled lane)",
+        "kind": "estimate",
+        "cost": {
+          "transport_eur": 206,
+          "fuel_l": 159,
+          "fuel_eur": 262,
+          "distance_km": 529,
+          "cost_per_kg": 0.0665
+        },
+        "risk": {
+          "level": "MEDIUM",
+          "score": 35,
+          "reasons": [
+            "Route crosses a driving ban \u2192 4h legal waiting",
+            "Lanes historically spill volume on 18% of days"
+          ],
+          "exposure_eur": 0,
+          "deadline_ok": true
+        },
+        "ldm": 1.8,
+        "historical": {
+          "avg_cost_eur": 2458,
+          "avg_fuel_l": 364,
+          "reliability_pct": 82.3,
+          "samples": 1332
+        }
+      },
+      {
+        "origin": "R08",
+        "destination": "R03",
+        "path": [
+          "R08",
+          "HN",
+          "R03"
+        ],
+        "depart_at": "2026-09-20T14:00:00+00:00",
+        "eta": "2026-09-21T09:50:00+00:00",
+        "total_minutes": 1190,
+        "components": {
+          "transport": 710,
+          "transfer": 271,
+          "hub_delay": 0,
+          "traffic": 0,
+          "legal_wait": 209
+        },
+        "steps": [
+          {
+            "type": "handling",
+            "location": "R08",
+            "location_name": "Frankfurt",
+            "start": "2026-09-20T14:00:00+00:00",
+            "end": "2026-09-20T16:31:00+00:00",
+            "minutes": 151,
+            "detail": "Loading & handling (historical proxy)",
+            "source": "derived from disposition.csv (proxy; file has no measured transfer times)"
+          },
+          {
+            "type": "legal_wait",
+            "location": "R08",
+            "location_name": "Frankfurt",
+            "start": "2026-09-20T16:31:00+00:00",
+            "end": "2026-09-20T20:00:00+00:00",
+            "minutes": 209,
+            "detail": "Sunday driving ban",
+            "source": "REGULATORY DATA"
+          },
+          {
+            "type": "drive",
+            "location": "R08",
+            "location_name": "Frankfurt",
+            "start": "2026-09-20T20:00:00+00:00",
+            "end": "2026-09-20T22:18:00+00:00",
+            "minutes": 138,
+            "detail": "Road Frankfurt \u2192 Heilbronn (150 km)",
+            "source": "relationen.csv"
+          },
+          {
+            "type": "handling",
+            "location": "HN",
+            "location_name": "Heilbronn",
+            "start": "2026-09-20T22:18:00+00:00",
+            "end": "2026-09-21T00:18:00+00:00",
+            "minutes": 120,
+            "detail": "Hub transfer (historical proxy)",
+            "source": "hub baseline (labelled)"
+          },
+          {
+            "type": "drive",
+            "location": "HN",
+            "location_name": "Heilbronn",
+            "start": "2026-09-21T00:18:00+00:00",
+            "end": "2026-09-21T09:50:00+00:00",
+            "minutes": 572,
+            "detail": "Road Heilbronn \u2192 Berlin (620 km)",
+            "source": "relationen.csv"
+          }
+        ],
+        "weather_notes": [],
+        "data_sources": {
+          "transport": "relationen.csv (km) + road average",
+          "transfer": "HISTORICAL (derived proxy from disposition.csv)",
+          "hub_delay": "MANAGER INPUT",
+          "traffic": "NOT_CONFIGURED",
+          "legal_wait": "REGULATORY DATA (kalender.csv + German rules)"
+        },
+        "label": "Via Heilbronn hub",
+        "kind": "scheduled",
+        "cost": {
+          "transport_eur": 224,
+          "fuel_l": 231,
+          "fuel_eur": 381,
+          "distance_km": 770,
+          "cost_per_kg": 0.0723
+        },
+        "risk": {
+          "level": "MEDIUM",
+          "score": 35,
+          "reasons": [
+            "Route crosses a driving ban \u2192 3h legal waiting",
+            "Lanes historically spill volume on 18% of days"
+          ],
+          "exposure_eur": 0,
+          "deadline_ok": true
+        },
+        "ldm": 1.8,
+        "historical": {
+          "avg_cost_eur": 2458,
+          "avg_fuel_l": 364,
+          "reliability_pct": 82.3,
+          "samples": 1332
+        }
+      }
+    ],
+    "created_at": "2026-09-19T14:00:28.280130+00:00",
+    "delay_minutes": 0
+  },
+  "SHP-B86017": {
+    "id": "SHP-B86017",
+    "origin": "R16",
+    "destination": "R21",
+    "current_location": "R16",
+    "route": [
+      "R16",
+      "R21"
+    ],
+    "next_hub": "R21",
+    "status": "PLANNED",
+    "planned_departure": "2026-09-25T16:00:00+00:00",
+    "scheduled_departure": null,
+    "current_eta": "2026-09-26T02:31:00+00:00",
+    "required_delivery": "2026-09-21T09:00:00+00:00",
+    "distance_km": 554,
+    "weight_kg": 21000,
+    "container": "C1135E",
+    "value_eur": 810000,
+    "est_cost_eur": 1271,
+    "est_fuel_l": 166,
+    "cost_per_kg": 0.0605,
+    "risk_level": "HIGH",
+    "customer_segment": "Top",
+    "alert": "Delivery deadline at risk",
+    "options": [
+      {
+        "origin": "R16",
+        "destination": "R21",
+        "path": [
+          "R16",
+          "R21"
+        ],
+        "depart_at": "2026-09-25T16:00:00+00:00",
+        "eta": "2026-09-26T02:31:00+00:00",
+        "total_minutes": 631,
+        "components": {
+          "transport": 511,
+          "transfer": 120,
+          "hub_delay": 0,
+          "traffic": 0,
+          "legal_wait": 0
+        },
+        "steps": [
+          {
+            "type": "handling",
+            "location": "R16",
+            "location_name": "Karlsruhe",
+            "start": "2026-09-25T16:00:00+00:00",
+            "end": "2026-09-25T18:00:00+00:00",
+            "minutes": 120,
+            "detail": "Loading & handling (proxy)",
+            "source": "proxy"
+          },
+          {
+            "type": "drive",
+            "location": "R16",
+            "location_name": "Karlsruhe",
+            "start": "2026-09-25T18:00:00+00:00",
+            "end": "2026-09-26T02:31:00+00:00",
+            "minutes": 511,
+            "detail": "Direct road Karlsruhe \u2192 Dresden (554 km, estimated)",
+            "source": "estimated"
+          }
+        ],
+        "weather_notes": [],
+        "data_sources": {
+          "transport": "estimated (haversine \u00d7 1.25)",
+          "legal_wait": "REGULATORY DATA"
+        },
+        "label": "Direct estimate (no scheduled lane)",
+        "kind": "estimate",
+        "cost": {
+          "transport_eur": 1271,
+          "fuel_l": 166,
+          "fuel_eur": 274,
+          "distance_km": 554,
+          "cost_per_kg": 0.0605
+        },
+        "risk": {
+          "level": "HIGH",
+          "score": 85,
+          "reasons": [
+            "ETA misses the required delivery window by 114h",
+            "Lanes historically spill volume on 16% of days",
+            "High-value shipment (\u20ac810,000) \u2014 elevated exposure"
+          ],
+          "exposure_eur": 810000,
+          "deadline_ok": false
+        },
+        "ldm": 12.0,
+        "historical": {
+          "avg_cost_eur": 1250,
+          "avg_fuel_l": 160,
+          "reliability_pct": 84.1,
+          "samples": 1332
+        }
+      },
+      {
+        "origin": "R16",
+        "destination": "R21",
+        "path": [
+          "R16",
+          "HN",
+          "R21"
+        ],
+        "depart_at": "2026-09-25T16:00:00+00:00",
+        "eta": "2026-09-26T05:09:00+00:00",
+        "total_minutes": 789,
+        "components": {
+          "transport": 517,
+          "transfer": 272,
+          "hub_delay": 0,
+          "traffic": 0,
+          "legal_wait": 0
+        },
+        "steps": [
+          {
+            "type": "handling",
+            "location": "R16",
+            "location_name": "Karlsruhe",
+            "start": "2026-09-25T16:00:00+00:00",
+            "end": "2026-09-25T18:32:00+00:00",
+            "minutes": 152,
+            "detail": "Loading & handling (historical proxy)",
+            "source": "derived from disposition.csv (proxy; file has no measured transfer times)"
+          },
+          {
+            "type": "drive",
+            "location": "R16",
+            "location_name": "Karlsruhe",
+            "start": "2026-09-25T18:32:00+00:00",
+            "end": "2026-09-25T19:55:00+00:00",
+            "minutes": 83,
+            "detail": "Road Karlsruhe \u2192 Heilbronn (90 km)",
+            "source": "relationen.csv"
+          },
+          {
+            "type": "handling",
+            "location": "HN",
+            "location_name": "Heilbronn",
+            "start": "2026-09-25T19:55:00+00:00",
+            "end": "2026-09-25T21:55:00+00:00",
+            "minutes": 120,
+            "detail": "Hub transfer (historical proxy)",
+            "source": "hub baseline (labelled)"
+          },
+          {
+            "type": "drive",
+            "location": "HN",
+            "location_name": "Heilbronn",
+            "start": "2026-09-25T21:55:00+00:00",
+            "end": "2026-09-26T05:09:00+00:00",
+            "minutes": 434,
+            "detail": "Road Heilbronn \u2192 Dresden (470 km)",
+            "source": "relationen.csv"
+          }
+        ],
+        "weather_notes": [],
+        "data_sources": {
+          "transport": "relationen.csv (km) + road average",
+          "transfer": "HISTORICAL (derived proxy from disposition.csv)",
+          "hub_delay": "MANAGER INPUT",
+          "traffic": "NOT_CONFIGURED",
+          "legal_wait": "REGULATORY DATA (kalender.csv + German rules)"
+        },
+        "label": "Via Heilbronn hub",
+        "kind": "scheduled",
+        "cost": {
+          "transport_eur": 1068,
+          "fuel_l": 168,
+          "fuel_eur": 278,
+          "distance_km": 560,
+          "cost_per_kg": 0.0509
+        },
+        "risk": {
+          "level": "HIGH",
+          "score": 85,
+          "reasons": [
+            "ETA misses the required delivery window by 117h",
+            "Lanes historically spill volume on 16% of days",
+            "High-value shipment (\u20ac810,000) \u2014 elevated exposure"
+          ],
+          "exposure_eur": 810000,
+          "deadline_ok": false
+        },
+        "ldm": 12.0,
+        "historical": {
+          "avg_cost_eur": 1250,
+          "avg_fuel_l": 160,
+          "reliability_pct": 84.1,
+          "samples": 1332
+        }
+      }
+    ],
+    "created_at": "2026-09-19T14:00:28.282170+00:00",
+    "delay_minutes": 6811
+  },
+  "SHP-67A4EA": {
+    "id": "SHP-67A4EA",
+    "origin": "R08",
+    "destination": "R11",
+    "current_location": "R08",
+    "route": [
+      "R08",
+      "R11"
+    ],
+    "next_hub": "R11",
+    "status": "SCHEDULED",
+    "planned_departure": "2026-09-19T14:00:00Z",
+    "scheduled_departure": "2026-09-19T14:00:00Z",
+    "current_eta": "2026-09-19T21:52:00+00:00",
+    "required_delivery": "2026-09-22T09:00:00Z",
+    "distance_km": 381,
+    "weight_kg": 8000.0,
+    "container": null,
+    "value_eur": 50000.0,
+    "est_cost_eur": 335,
+    "est_fuel_l": 114,
+    "cost_per_kg": 0.0419,
+    "risk_level": "LOW",
+    "customer_segment": null,
+    "alert": null,
+    "options": [
+      {
+        "origin": "R08",
+        "destination": "R11",
+        "path": [
+          "R08",
+          "R11"
+        ],
+        "depart_at": "2026-09-19T14:00:00+00:00",
+        "eta": "2026-09-19T21:52:00+00:00",
+        "total_minutes": 472,
+        "components": {
+          "transport": 352,
+          "transfer": 120,
+          "hub_delay": 0,
+          "traffic": 0,
+          "legal_wait": 0
+        },
+        "steps": [
+          {
+            "type": "handling",
+            "location": "R08",
+            "location_name": "Frankfurt",
+            "start": "2026-09-19T14:00:00+00:00",
+            "end": "2026-09-19T16:00:00+00:00",
+            "minutes": 120,
+            "detail": "Loading & handling (proxy)",
+            "source": "proxy"
+          },
+          {
+            "type": "drive",
+            "location": "R08",
+            "location_name": "Frankfurt",
+            "start": "2026-09-19T16:00:00+00:00",
+            "end": "2026-09-19T21:52:00+00:00",
+            "minutes": 352,
+            "detail": "Direct road Frankfurt \u2192 M\u00fcnchen (381 km, estimated)",
+            "source": "estimated"
+          }
+        ],
+        "weather_notes": [],
+        "data_sources": {
+          "transport": "estimated (haversine \u00d7 1.25)",
+          "legal_wait": "REGULATORY DATA"
+        },
+        "label": "Direct estimate (no scheduled lane)",
+        "kind": "estimate",
+        "cost": {
+          "transport_eur": 335,
+          "fuel_l": 114,
+          "fuel_eur": 188,
+          "distance_km": 381,
+          "cost_per_kg": 0.0419
+        },
+        "risk": {
+          "level": "LOW",
+          "score": 15,
+          "reasons": [
+            "Lanes historically spill volume on 18% of days"
+          ],
+          "exposure_eur": 0,
+          "deadline_ok": true
+        },
+        "ldm": 4.6,
+        "historical": {
+          "avg_cost_eur": 2256,
+          "avg_fuel_l": 274,
+          "reliability_pct": 82.1,
+          "samples": 1332
+        },
+        "geometry": [
+          [
+            8.681707,
+            50.110292
+          ],
+          [
+            8.691618,
+            50.086224
+          ],
+          [
+            8.742333,
+            50.063075
+          ],
+          [
+            8.909121,
+            50.055213
+          ],
+          [
+            9.028745,
+            49.988399
+          ],
+          [
+            9.24463,
+            49.998053
+          ],
+          [
+            9.320692,
+            49.958737
+          ],
+          [
+            9.375337,
+            49.90501
+          ],
+          [
+            9.581319,
+            49.808228
+          ],
+          [
+            9.572614,
+            49.777011
+          ],
+          [
+            9.606466,
+            49.764373
+          ],
+          [
+            9.72965,
+            49.77591
+          ],
+          [
+            9.805835,
+            49.747336
+          ],
+          [
+            9.955709,
+            49.755398
+          ],
+          [
+            9.988482,
+            49.738639
+          ],
+          [
+            10.117569,
+            49.784562
+          ],
+          [
+            10.325093,
+            49.773791
+          ],
+          [
+            10.428325,
+            49.785611
+          ],
+          [
+            10.599299,
+            49.758889
+          ],
+          [
+            10.673368,
+            49.731146
+          ],
+          [
+            10.803907,
+            49.736279
+          ],
+          [
+            10.912769,
+            49.639561
+          ],
+          [
+            10.940822,
+            49.568089
+          ],
+          [
+            11.00115,
+            49.557509
+          ],
+          [
+            11.190978,
+            49.46666
+          ],
+          [
+            11.233365,
+            49.462341
+          ],
+          [
+            11.195306,
+            49.407035
+          ],
+          [
+            11.226416,
+            49.217623
+          ],
+          [
+            11.291459,
+            49.07906
+          ],
+          [
+            11.357848,
+            49.038183
+          ],
+          [
+            11.357453,
+            49.002927
+          ],
+          [
+            11.466364,
+            48.925369
+          ],
+          [
+            11.457774,
+            48.750729
+          ],
+          [
+            11.526844,
+            48.621769
+          ],
+          [
+            11.592459,
+            48.57653
+          ],
+          [
+            11.595097,
+            48.362635
+          ],
+          [
+            11.647123,
+            48.259844
+          ],
+          [
+            11.582045,
+            48.134953
+          ]
+        ]
+      },
+      {
+        "origin": "R08",
+        "destination": "R11",
+        "path": [
+          "R08",
+          "HN",
+          "R11"
+        ],
+        "depart_at": "2026-09-19T14:00:00+00:00",
+        "eta": "2026-09-20T22:49:00+00:00",
+        "total_minutes": 1969,
+        "components": {
+          "transport": 378,
+          "transfer": 271,
+          "hub_delay": 0,
+          "traffic": 0,
+          "legal_wait": 1320
+        },
+        "steps": [
+          {
+            "type": "handling",
+            "location": "R08",
+            "location_name": "Frankfurt",
+            "start": "2026-09-19T14:00:00+00:00",
+            "end": "2026-09-19T16:31:00+00:00",
+            "minutes": 151,
+            "detail": "Loading & handling (historical proxy)",
+            "source": "derived from disposition.csv (proxy; file has no measured transfer times)"
+          },
+          {
+            "type": "drive",
+            "location": "R08",
+            "location_name": "Frankfurt",
+            "start": "2026-09-19T16:31:00+00:00",
+            "end": "2026-09-19T18:49:00+00:00",
+            "minutes": 138,
+            "detail": "Road Frankfurt \u2192 Heilbronn (150 km)",
+            "source": "relationen.csv"
+          },
+          {
+            "type": "handling",
+            "location": "HN",
+            "location_name": "Heilbronn",
+            "start": "2026-09-19T18:49:00+00:00",
+            "end": "2026-09-19T20:49:00+00:00",
+            "minutes": 120,
+            "detail": "Hub transfer (historical proxy)",
+            "source": "hub baseline (labelled)"
+          },
+          {
+            "type": "drive",
+            "location": "HN",
+            "location_name": "Heilbronn",
+            "start": "2026-09-19T20:49:00+00:00",
+            "end": "2026-09-19T22:00:00+00:00",
+            "minutes": 71,
+            "detail": "Road Heilbronn \u2192 M\u00fcnchen (260 km)",
+            "source": "relationen.csv"
+          },
+          {
+            "type": "legal_wait",
+            "location": "HN",
+            "location_name": "Heilbronn",
+            "start": "2026-09-19T22:00:00+00:00",
+            "end": "2026-09-20T20:00:00+00:00",
+            "minutes": 1320,
+            "detail": "Sunday driving ban",
+            "source": "REGULATORY DATA"
+          },
+          {
+            "type": "drive",
+            "location": "HN",
+            "location_name": "Heilbronn",
+            "start": "2026-09-20T20:00:00+00:00",
+            "end": "2026-09-20T22:49:00+00:00",
+            "minutes": 169,
+            "detail": "Road Heilbronn \u2192 M\u00fcnchen (260 km)",
+            "source": "relationen.csv"
+          }
+        ],
+        "weather_notes": [],
+        "data_sources": {
+          "transport": "relationen.csv (km) + road average",
+          "transfer": "HISTORICAL (derived proxy from disposition.csv)",
+          "hub_delay": "MANAGER INPUT",
+          "traffic": "NOT_CONFIGURED",
+          "legal_wait": "REGULATORY DATA (kalender.csv + German rules)"
+        },
+        "label": "Via Heilbronn hub",
+        "kind": "scheduled",
+        "cost": {
+          "transport_eur": 341,
+          "fuel_l": 123,
+          "fuel_eur": 203,
+          "distance_km": 410,
+          "cost_per_kg": 0.0426
+        },
+        "risk": {
+          "level": "MEDIUM",
+          "score": 35,
+          "reasons": [
+            "Route crosses a driving ban \u2192 22h legal waiting",
+            "Lanes historically spill volume on 18% of days"
+          ],
+          "exposure_eur": 0,
+          "deadline_ok": true
+        },
+        "ldm": 4.6,
+        "historical": {
+          "avg_cost_eur": 2256,
+          "avg_fuel_l": 274,
+          "reliability_pct": 82.1,
+          "samples": 1332
+        },
+        "geometry": [
+          [
+            8.681707,
+            50.110292
+          ],
+          [
+            8.65825,
+            50.095564
+          ],
+          [
+            8.616968,
+            50.088063
+          ],
+          [
+            8.594314,
+            50.033156
+          ],
+          [
+            8.612674,
+            49.925661
+          ],
+          [
+            8.592814,
+            49.834634
+          ],
+          [
+            8.543954,
+            49.764659
+          ],
+          [
+            8.560644,
+            49.504958
+          ],
+          [
+            8.539899,
+            49.466596
+          ],
+          [
+            8.540178,
+            49.437284
+          ],
+          [
+            8.545376,
+            49.367003
+          ],
+          [
+            8.560159,
+            49.331736
+          ],
+          [
+            8.603679,
+            49.290132
+          ],
+          [
+            8.642137,
+            49.273989
+          ],
+          [
+            8.718231,
+            49.280704
+          ],
+          [
+            8.758523,
+            49.275602
+          ],
+          [
+            8.887649,
+            49.241266
+          ],
+          [
+            8.912257,
+            49.227486
+          ],
+          [
+            9.063133,
+            49.214386
+          ],
+          [
+            9.126677,
+            49.186413
+          ],
+          [
+            9.195768,
+            49.186715
+          ],
+          [
+            9.205213,
+            49.164771
+          ],
+          [
+            9.197862,
+            49.137452
+          ],
+          [
+            9.210865,
+            49.141766
+          ],
+          [
+            9.210865,
+            49.141766
+          ],
+          [
+            9.225815,
+            49.114504
+          ],
+          [
+            9.258057,
+            49.104633
+          ],
+          [
+            9.271249,
+            49.087894
+          ],
+          [
+            9.289625,
+            49.08286
+          ],
+          [
+            9.234242,
+            49.000851
+          ],
+          [
+            9.227532,
+            48.970452
+          ],
+          [
+            9.187817,
+            48.934508
+          ],
+          [
+            9.157465,
+            48.920628
+          ],
+          [
+            9.118588,
+            48.848188
+          ],
+          [
+            9.013856,
+            48.784186
+          ],
+          [
+            9.029661,
+            48.769205
+          ],
+          [
+            9.036692,
+            48.739635
+          ],
+          [
+            9.053413,
+            48.729681
+          ],
+          [
+            9.096263,
+            48.712865
+          ],
+          [
+            9.169551,
+            48.705198
+          ],
+          [
+            9.200924,
+            48.693415
+          ],
+          [
+            9.249574,
+            48.697615
+          ],
+          [
+            9.306323,
+            48.691921
+          ],
+          [
+            9.453936,
+            48.631398
+          ],
+          [
+            9.563853,
+            48.631964
+          ],
+          [
+            9.634737,
+            48.606067
+          ],
+          [
+            9.664812,
+            48.58264
+          ],
+          [
+            9.630245,
+            48.55904
+          ],
+          [
+            9.65384,
+            48.534938
+          ],
+          [
+            9.753621,
+            48.518541
+          ],
+          [
+            9.812498,
+            48.518658
+          ],
+          [
+            9.834606,
+            48.510604
+          ],
+          [
+            9.857987,
+            48.486868
+          ],
+          [
+            9.94691,
+            48.456937
+          ],
+          [
+            10.053746,
+            48.453111
+          ],
+          [
+            10.118893,
+            48.46467
+          ],
+          [
+            10.192054,
+            48.45644
+          ],
+          [
+            10.229962,
+            48.429174
+          ],
+          [
+            10.322453,
+            48.436844
+          ],
+          [
+            10.372475,
+            48.430317
+          ],
+          [
+            10.41231,
+            48.412945
+          ],
+          [
+            10.465178,
+            48.413014
+          ],
+          [
+            10.543775,
+            48.399871
+          ],
+          [
+            10.679436,
+            48.419826
+          ],
+          [
+            10.800551,
+            48.420005
+          ],
+          [
+            11.059913,
+            48.395524
+          ],
+          [
+            11.219203,
+            48.299885
+          ],
+          [
+            11.281617,
+            48.275113
+          ],
+          [
+            11.454086,
+            48.166276
+          ],
+          [
+            11.506907,
+            48.163665
+          ],
+          [
+            11.510847,
+            48.169752
+          ],
+          [
+            11.53277,
+            48.169738
+          ],
+          [
+            11.557441,
+            48.150215
+          ],
+          [
+            11.583475,
+            48.14402
+          ],
+          [
+            11.582045,
+            48.134953
+          ]
+        ]
+      }
+    ],
+    "created_at": "2026-09-19T14:01:48.888761+00:00",
+    "delay_minutes": 0
+  }
+}
